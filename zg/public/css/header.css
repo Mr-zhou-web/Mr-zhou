@@ -1,0 +1,79 @@
+a{
+	text-decoration: none!important;
+	
+}
+.my_ul>li{
+	margin-right: 3rem;
+	font-size: 18px;
+}
+.my_ul>li>a{
+	color:#8b4801;
+	font-weight: bold;
+}
+.my_ul>li>a:hover{
+	color: #fe6d00;
+	text-decoration: none;
+}
+.my_ul>li{
+	position: relative;
+}
+/* 二级菜单样式 */
+.my_ul>li>ul>li{
+	font-size: 16px;
+	margin-top: 6px;
+}
+
+.my_ul>li>ul>li>a{
+	color:#712742;
+}
+.my_ul>li:nth-child(2)>ul{
+	position: absolute;
+	top:28px;left:8px;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.5s linear ; 
+}
+.my_ul>li:nth-child(2):hover>ul{
+	opacity: 1;
+	height: 200px;
+}
+.my_ul>li:nth-child(4)>ul{
+	position: absolute;
+	top: 54px;left: -13px;
+	opacity: 0;
+	overflow: hidden;
+	transition: top .5s linear,opacity .5s linear
+}
+.my_ul>li:nth-child(4)>ul>li{
+	margin-top: 10px;
+}
+.my_ul>li:nth-child(4):hover>ul{
+		top:28px;
+		opacity: 1;
+}
+.my_ul>li:nth-child(4)>ul,.my_ul>li:nth-child(6)>ul{
+	width: 0px;height: 0px;
+	overflow: hidden;
+}
+.my_ul>li:nth-child(4):hover>ul{
+		top:28px;
+		width: 64px;height: 100px;
+}
+.my_ul>li:nth-child(6)>ul{
+	position: absolute;
+	top:50px;
+	opacity: 0;
+	overflow: hidden;
+	transition:top .5s linear,opacity .5s linear;
+}
+.my_ul>li:nth-child(6):hover>ul{
+	top:28px;
+	opacity: 1;
+}
+.my_ul>li:nth-child(6):hover>ul{
+	width: 100px;height: 50px;
+	opacity: 1;
+	overflow: inherit;
+}
+
